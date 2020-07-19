@@ -1,0 +1,131 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 2rem 1rem;
+  }
+  
+  .title {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    margin: 0 0 2rem;
+  }
+  
+  .frame {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 0 10px;
+    width: 300px;
+    height: 150px;
+    border: 1px solid #ccc;
+  
+    .target {
+      position: absolute;
+      top: calc(50% - 15px);
+      width: 30px;
+      height: 30px;
+      background: #000;
+    }
+  
+    .target-base {
+      opacity: 0.25;
+    }
+  }
+  
+  button {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #000;
+    color: #000;
+    background: none;
+    cursor: pointer;
+  
+    &:not(:first-of-type) {
+      margin-left: -1px;
+    }
+  
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+  
+    input[type="range"] {
+      position: relative;
+      width: 70%;
+      background: none;
+      -webkit-appearance: none;
+  
+      &:focus {
+        border: none;
+        outline: none;
+      }
+  
+      &::-moz-range-track {
+        height: 1px;
+        background: #000;
+      }
+  
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: #000;
+        cursor: pointer;
+      }
+  
+      &::-moz-range-thumb {
+        width: 17px;
+        height: 17px;
+        border: none;
+        border-radius: 50%;
+        background: #000;
+        cursor: pointer;
+      }
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        width: 100%;
+        height: 1px;
+        background: #000;
+        cursor: pointer;
+      }
+    }
+    
+    input[type="number"] {
+      border: 1px solid #000;
+      border-radius: 0;
+      width: 20%;
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  
+  ///// panda 
+
+  .nav__link:not(.splitting){
+    display:none;
+ }
+   .nav__link .char{
+     opacity:0;
+   }
+   .nav__link .word:first-child .char:first-child{
+     opacity:1;
+   }
